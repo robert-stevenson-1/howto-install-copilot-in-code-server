@@ -2,7 +2,7 @@
 
 # Extract VS Code version from code-server
 get_vscode_version() {
-    code-server --version 2>/dev/null | grep "with Code" | sed 's/.*with Code //'
+    code-server --version | head -n1
 }
 
 # Get user-data-dir from running code-server process
